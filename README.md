@@ -9,6 +9,11 @@ predict `health_condition` ∈ {`at-risk`, `unhealthy`, `fit`} for college stude
 [`student-health-risk-ensemble.ipynb`](student-health-risk-ensemble.ipynb) — upload to Kaggle as a
 notebook attached to the competition dataset and run all cells; it writes `submission.csv`.
 
+**Runtime:** designed for Kaggle's **GPU T4 x2** accelerator with **internet off**. All three
+libraries (LightGBM, XGBoost, CatBoost) are pre-installed on the Kaggle image, so no downloads are
+needed. Each model probes the GPU once and falls back to CPU automatically, so the notebook also
+runs unchanged on a CPU-only kernel.
+
 Expected input paths (auto-detected, first match wins):
 
 ```
